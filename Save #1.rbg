@@ -1,0 +1,9 @@
+forward (2, rotations, 50);
+setMotor (clawMotor, 50);
+repeat (forever) {
+   if (getColorGrayscale(colorDetector) == 0) {
+      lineTrackRight (colorDetector, 50, 50, 0);
+   } else {
+      lineTrackLeft(colorDetector, 50, 50, 0);
+   }
+}
